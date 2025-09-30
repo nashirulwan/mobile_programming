@@ -1,16 +1,46 @@
-# mobile_prac
+# 📱 Mobile Programming – Modul 1
+**Pengenalan Lingkungan Pengembangan Android dengan Flutter**
 
-A new Flutter project.
+## 👤 Identitas
+- **Nama**: Ahmad Nashir Ulwan  
+- **NIM**: 230605110122  
+- **Kelas**: B  
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🎯 Tujuan
+- Mengenal dasar penggunaan **Flutter**.  
+- Menjalankan aplikasi default dari template `flutter create`.  
+- Memodifikasi teks pada AppBar dan Body.  
+- Menguji aplikasi di **emulator Android** dan **smartphone nyata**, lalu membandingkan waktu eksekusi.  
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 📝 Ringkasan Tugas
+Berikut langkah-langkah penyelesaian tugas modul 1:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. **Menjalankan aplikasi bawaan Flutter (Counter App)** hasil dari `flutter create`.  
+2. **Memodifikasi file `main.dart`:**  
+   - AppBar diubah menjadi **"Program Pertamaku"**.  
+   - Body diubah menjadi teks **"Hello, Ahmad Nashir Ulwan!"**.  
+3. **Menjalankan aplikasi di Emulator Android** untuk melihat hasil modifikasi.  
+4. **Menjalankan aplikasi di Smartphone nyata** melalui USB Debugging.  
+5. **Mencatat waktu eksekusi**:  
+   - Emulator: **48.6 detik**  
+   - Smartphone: **22.1 detik**  
+   - Perbedaan terjadi karena emulator berjalan di atas virtualisasi sehingga lebih lambat dibanding perangkat fisik.  
+
+---
+
+## 📸 Screenshot Hasil
+Hasil tampilan aplikasi setelah modifikasi:  
+
+![Modul 1 Result](./assets/region-20250930-081239.png)
+
+---
+
+## ✅ Kesimpulan
+- Flutter menyediakan template awal (Counter App) yang mudah dijalankan.  
+- Modifikasi kode sederhana berhasil mengubah tampilan AppBar dan teks Body.  
+- Aplikasi dapat berjalan di emulator maupun smartphone nyata.  
+- **Smartphone lebih cepat** dalam eksekusi aplikasi dibanding emulator karena tidak ada lapisan virtualisasi.  
