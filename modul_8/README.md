@@ -32,8 +32,10 @@ Berikut adalah tampilan dari halaman utama dan halaman detail:
 **Halaman Utama (Home)**
 ![Modul 8 Home](./assets/region-20250930-083041.png)
 
+
 **Halaman Detail Game**
 ![Modul 8 Detail](./assets/region-20250930-083101.png)
+
 ![Modul 8 Detail](./assets/region-20250930-083113.png)
 
 ---
