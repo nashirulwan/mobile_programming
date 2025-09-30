@@ -27,8 +27,8 @@ class MyApp extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  KotakCustom(color: Colors.red, text: 'Kotak 3'),
-                  KotakCustom(color: Colors.amberAccent, text: 'Kotak 4'),
+                  KotakCustom(color: Colors.amber, text: 'Kotak 3'),
+                  KotakCustom(color: Colors.purple, text: 'Kotak 4'),
                 ],
               ),
             ],
@@ -58,7 +58,7 @@ class KotakCustom extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(Icons.add_circle, color: Colors.white, size: 40),
+          Icon(Icons.favorite, color: Colors.red, size: 40),
           SizedBox(height: 8),
           Text(text, style: TextStyle(color: Colors.white, fontSize: 16)),
         ],
