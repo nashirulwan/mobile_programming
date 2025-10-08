@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'view/home.dart'; // Fixed import path
+import 'package:modul_10/view/home.dart';
+import 'package:modul_10/view/detail.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Game Store',
-      home: Home(), // Removed const, since Home is not a const constructor
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const Home(),
+        '/detail': (context) {
+          final gameId = ModalRoute.of(context)!.settings.arguments as int;
+          return Detail(gameTerpilih: gameId);
+        },
+      },
     );
   }
 }
