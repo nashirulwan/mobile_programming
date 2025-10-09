@@ -34,7 +34,6 @@ Langkah-langkah pengerjaan tugas **Music Player Card**:
 Tampilan aplikasi pemutar musik hasil tugas:
 
 ![Modul 5 Result](./assets/region-20250930-082328.png)
-*Tampilan Aplikasi Pemutar Musik*
 
 ---
 

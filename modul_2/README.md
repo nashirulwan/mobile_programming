@@ -36,7 +36,6 @@ Berikut langkah-langkah penyelesaian tugas modul 2:
 Hasil tampilan aplikasi:  
 
 ![Modul 2 Result](./assets/region-20250930-081712.png)
-*Tampilan Aplikasi*
 
 ---
 

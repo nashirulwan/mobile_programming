@@ -35,7 +35,6 @@ Langkah-langkah pengerjaan tugas **Daftar Game dari API**:
 Tampilan aplikasi daftar game gratis hasil tugas:
 
 ![Modul 6 Result](./assets/region-20250930-082516.png)
-*Tampilan Aplikasi Daftar Game*
 
 ---
 

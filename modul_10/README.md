@@ -41,12 +41,10 @@ Berikut adalah tampilan dari halaman utama dan halaman detail aplikasi:
 **Tampilan Halaman Home**
 
 ![Modul 9 Home](./assets/region-20251009-223731.png)
-*Tampilan Halaman Home*
 
 **Tampilan Halaman Detail**
 
 ![Modul 9 Home](./assets/region-20251009-223757.png)
-*Tampilan Halaman Detail*
 
 ---
 

@@ -33,12 +33,10 @@ Berikut adalah tampilan dari kedua halaman yang dibuat dalam praktikum:
 **Halaman Utama (Home)**
 
 ![Modul 7 Home](./assets/region-20250930-082634.png)
-*Tampilan Halaman Utama (Home)*
 
 **Halaman Tujuan**
 
 ![Modul 7 Tujuan](./assets/region-20250930-082648.png)
-*Tampilan Halaman Tujuan*
 
 ---
 
