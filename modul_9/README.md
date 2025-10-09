@@ -36,7 +36,9 @@ Langkah-langkah pengerjaan tugas **Aplikasi Tasbih Digital**:
 Berikut adalah tampilan dari aplikasi Tasbih Digital yang telah dibuat:
 
 **Tampilan Aplikasi Tasbih Digital**
+
 ![Modul 9 Home](./assets/region-20251002-233852.png)
+*Tampilan Aplikasi Tasbih Digital*
 
 ---
 

@@ -1,35 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:game_app/model/game.dart';
-import 'package:game_app/viewmodel/fetchgame.dart';
-
-class _HomeState extends State<Home> {
-  late Future<List<Game>> gameList;
-
-  @override
-  void initState() {
-    super.initState();
-    loadGames();
-  }
-
-  Future<List<Game>> loadGames() async {
-    gameList = fetchGames();
-    return gameList;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.amberAccent.shade400,
-      body: SafeArea(
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-          child: Column(children: [_searchBar(), const SizedBox(height: 10)]),
-        ),
-      ),
-    );
-  }
-}
+import 'package:modul_10/model/game.dart';
+import 'package:modul_10/viewmodel/fetchgame.dart';
 
 TextField _searchBar() {
   return TextField(
@@ -65,7 +36,7 @@ Card _listItem(String urlCover, String judul, String genre) {
         height: 75,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(8),
-          child: Image.network(urlCover, scale: 3, fit: BoxFit.cover),
+          child: Image.network(urlCover, fit: BoxFit.cover),
         ),
       ),
       title: Text(judul),
@@ -77,43 +48,83 @@ Card _listItem(String urlCover, String judul, String genre) {
   );
 }
 
-FutureBuilder<List<Game>>(
-  future: fetchGames(), 
-  builder: (context, snapshot) {
-    if (snapshot.connectionState == ConnectionState.waiting) {
-      return const Expanded(
-        child: Center(
-          child: CircularProgressIndicator(),
-        ),
-      );
-    } else if (snapshot.hasError) {
-      return Text('Error: ${snapshot.error}');
-    } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-      return const Text('Tidak ada data game.');
-    } else {
-      final games = snapshot.data!.take(25).toList();
-      return Expanded(
-        child: ListView.builder(
-          itemCount: games.length,
-          itemBuilder: (context, index) {
-            final game = games[index];
-            return GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(
-                  context,
-                  '/detail', 
-                  arguments: game.id, 
-                );
-              },
-              child: _listItem(
-                game.thumbnail,
-                game.title,
-                game.genre,
+class Home extends StatefulWidget {
+  const Home({super.key});
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  // Variabel untuk menyimpan hasil pemanggilan API
+  late Future<List<Game>> gameList;
+
+  @override
+  void initState() {
+    super.initState();
+    // Memanggil API hanya satu kali saat halaman pertama kali dibuka
+    gameList = fetchGames();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.amberAccent.shade400,
+      body: SafeArea(
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+          child: Column(
+            children: [
+              _searchBar(),
+              const SizedBox(height: 10),
+              Expanded(
+                child: FutureBuilder<List<Game>>(
+                  // Gunakan variabel 'gameList' yang sudah ada, jangan panggil fetchGames() lagi
+                  future: gameList,
+                  builder: (context, snapshot) {
+                    // Saat data masih loading, tampilkan loading indicator
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      return const Center(child: CircularProgressIndicator());
+                    }
+                    // Jika ada error, tampilkan pesan error
+                    else if (snapshot.hasError) {
+                      return Text('Error: ${snapshot.error}');
+                    }
+                    // Jika data tidak ada atau kosong
+                    else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                      return const Text('Tidak ada data game.');
+                    }
+                    // Jika data berhasil didapatkan
+                    else {
+                      final games = snapshot.data!.take(25).toList();
+                      return ListView.builder(
+                        itemCount: games.length,
+                        itemBuilder: (context, index) {
+                          final game = games[index];
+                          return GestureDetector(
+                            onTap: () {
+                              Navigator.pushNamed(
+                                context,
+                                '/detail',
+                                arguments: game.id,
+                              );
+                            },
+                            child: _listItem(
+                              game.thumbnail,
+                              game.title,
+                              game.genre,
+                            ),
+                          );
+                        },
+                      );
+                    }
+                  },
+                ),
               ),
-            );
-          },
+            ],
+          ),
         ),
-      );
-    }
-  },
-)
+      ),
+    );
+  }
+}

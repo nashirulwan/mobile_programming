@@ -30,13 +30,17 @@ Karena pada modul ini tidak ada tugas spesifik dan hanya berisi praktikum, maka 
 Berikut adalah tampilan dari halaman utama dan halaman detail:
 
 **Halaman Utama (Home)**
-![Modul 8 Home](./assets/region-20250930-083041.png)
 
+![Modul 8 Home](./assets/region-20250930-083041.png)
+*Tampilan Halaman Utama (Home)*
 
 **Halaman Detail Game**
+
 ![Modul 8 Detail](./assets/region-20250930-083101.png)
+*Tampilan Halaman Detail1*
 
 ![Modul 8 Detail](./assets/region-20250930-083113.png)
+*Tampilan Halaman Detail2*
 
 ---
 

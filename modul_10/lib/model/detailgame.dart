@@ -20,7 +20,6 @@ class MinimumSystemRequirements {
 
   factory MinimumSystemRequirements.fromJson(Map<String, dynamic> json) =>
       _$MinimumSystemRequirementsFromJson(json);
-
   Map<String, dynamic> toJson() => _$MinimumSystemRequirementsToJson(this);
 }
 
@@ -33,48 +32,51 @@ class Screenshot {
 
   factory Screenshot.fromJson(Map<String, dynamic> json) =>
       _$ScreenshotFromJson(json);
-
   Map<String, dynamic> toJson() => _$ScreenshotToJson(this);
 }
 
 @JsonSerializable()
-class Detailgame {
+class DetailGame {
   final int id;
   final String title;
   final String thumbnail;
   final String status;
-  final String short_description;
+  @JsonKey(name: 'short_description')
+  final String shortDescription;
   final String description;
-  final String game_url;
+  @JsonKey(name: 'game_url')
+  final String gameUrl;
   final String genre;
   final String platform;
   final String publisher;
   final String developer;
-  final String release_date;
-  final String freetogame_profile_url;
-  final MinimumSystemRequirements minimum_system_requirements;
+  @JsonKey(name: 'release_date')
+  final String releaseDate;
+  @JsonKey(name: 'freetogame_profile_url')
+  final String freetogameProfileUrl;
+  @JsonKey(name: 'minimum_system_requirements')
+  final MinimumSystemRequirements minimumSystemRequirements;
   final List<Screenshot> screenshots;
 
-  Detailgame({
+  DetailGame({
     required this.id,
     required this.title,
     required this.thumbnail,
     required this.status,
-    required this.short_description,
+    required this.shortDescription,
     required this.description,
-    required this.game_url,
+    required this.gameUrl,
     required this.genre,
     required this.platform,
     required this.publisher,
     required this.developer,
-    required this.release_date,
-    required this.freetogame_profile_url,
-    required this.minimum_system_requirements,
+    required this.releaseDate,
+    required this.freetogameProfileUrl,
+    required this.minimumSystemRequirements,
     required this.screenshots,
   });
 
-  factory Detailgame.fromJson(Map<String, dynamic> json) =>
-      _$DetailgameFromJson(json);
-
-  Map<String, dynamic> toJson() => _$DetailgameToJson(this);
+  factory DetailGame.fromJson(Map<String, dynamic> json) =>
+      _$DetailGameFromJson(json);
+  Map<String, dynamic> toJson() => _$DetailGameToJson(this);
 }

@@ -32,6 +32,7 @@ Langkah-langkah pengerjaan tugas **Control Bar Pemutar Musik**:
 Tampilan aplikasi pemutar musik hasil tugas:
 
 ![Modul 4 Result](./assets/region-20250930-081958.png)
+*Tampilan Aplikasi Pemutar Musik*
 
 ---
 

@@ -34,8 +34,8 @@ class Game {
       gameUrl: json['game_url'],
       genre: json['genre'],
       platform: json['platform'],
-      publisher: ['publisher'],
-      developer: ['developer'],
+      publisher: json['publisher'],
+      developer: json['developer'],
       releaseDate: json['release_date'],
       freetogameProfileUrl: json['freetogame_profile_url'],
     );

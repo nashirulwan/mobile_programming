@@ -42,6 +42,7 @@ Langkah-langkah yang dikerjakan dalam praktikum Modul 3:
 Tampilan aplikasi cuaca hasil tugas:  
 
 ![Modul 3 Result](./assets/region-20250930-081828.png)
+*Tampilan Aplikasi Cuaca*
 
 ---
 
