@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-// import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart'; // Dihapus karena tidak terpakai
+import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart'; // Import yang tidak terpakai sudah di-comment, bagus
 import '../viewmodel/tasbih_controller.dart';
 import 'package:get/get.dart';
 
 class Home extends StatelessWidget {
-  const Home({super.key});
-
-  // Inisialisasi controller
-  final TasbihController controller = Get.put(TasbihController());
+  const Home({super.key}); // Constructor masih const
 
   @override
   Widget build(BuildContext context) {
+    // Inisialisasi controller dipindah ke sini
+    final TasbihController controller = Get.put(TasbihController());
+
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 119, 210, 145),
       body: SafeArea(
@@ -18,15 +18,12 @@ class Home extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Widget Obx untuk Teks Counter
               Obx(
                 () => Text(
                   '${controller.counter.value.round()}',
                   style: const TextStyle(fontSize: 250),
                 ),
               ),
-
-              // Widget Obx untuk LinearProgressIndicator
               Obx(
                 () => Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40.0),
@@ -39,20 +36,14 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-
               const SizedBox(height: 75),
-
-              // Tombol Counter (Fingerprint)
               ClipRRect(
                 borderRadius: const BorderRadius.all(Radius.circular(50)),
                 child: InkWell(
                   onTap: controller.incrementCounter,
                   child: Container(
                     decoration: const BoxDecoration(color: Colors.white),
-                    // --- INI PERBAIKANNYA ---
-                    // Menambahkan padding sesuai modul halaman 5
-                    padding: const EdgeInsets.all(30),
-                    // -------------------------
+                    padding: const EdgeInsets.all(30), // Padding sudah ada
                     child: const Icon(Icons.fingerprint, size: 100),
                   ),
                 ),
@@ -61,7 +52,6 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
-      // Tombol Reset
       floatingActionButton: FloatingActionButton(
         onPressed: controller.resetCounter,
         backgroundColor: Colors.white,

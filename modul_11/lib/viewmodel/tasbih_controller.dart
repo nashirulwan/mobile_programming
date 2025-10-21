@@ -1,12 +1,13 @@
-import 'package:get/get.dart';
+import 'package:get/get.dart'; // <-- INI SUDAH ADA DAN BENAR
 
-class TasbihController extends GetController {
+class TasbihController extends GetxController {
+  // <-- INI JUGA SUDAH BENAR
   var counter = 0.0.obs;
   var progress = 0.0.obs;
   final double maxCount = 33;
 
   void incrementCounter() {
-    if (counter < maxCount) {
+    if (counter.value < maxCount) {
       counter.value++;
       progress.value = (counter.value / maxCount) * 100;
     }
